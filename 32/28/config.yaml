@@ -1,0 +1,142 @@
+meta:
+  version: 2
+  flow: Classic
+  substituting_steps:
+    # IO pads are used instead of pins
+    OpenROAD.IOPlacement: null
+    +OpenROAD.Floorplan: OpenROAD.Padring
+    
+    Magic.WriteLEF: null # Not needed, save time
+    Odb.CheckDesignAntennaProperties: null # Requires LEF
+    
+    # Add Seal Ring
+    #+Checker.XOR: KLayout.SealRing
+    
+    # Run Filler insertion
+    #+KLayout.SealRing: KLayout.FillerGeneration
+    
+    # Save time
+    KLayout.DRC: null
+    Magic.DRC: null
+    KLayout.XOR: null
+
+    Odb.ReportDisconnectedPins: null # TODO IOs
+
+    # Add steps for LVS with KLayout
+    #+Checker.LVS: OpenROAD.WriteCDL
+    #+OpenROAD.WriteCDL: KLayout.LVS
+    
+    # LVS does not work yet automatically
+    Magic.SpiceExtraction: null
+    Checker.IllegalOverlap: null
+    Netgen.LVS: null
+    
+    # Just ingore for now
+    Checker.SetupViolations: null
+    Checker.HoldViolations: null
+VERILOG_DEFINES:
+- FUNCTIONAL
+
+DESIGN_NAME: top
+VERILOG_FILES:
+- dir::src/top.v
+
+# TODO magic places the I/O pads at wrong positions
+#PRIMARY_GDSII_STREAMOUT_TOOL: klayout
+#MAGIC_EXT_USE_GDS: true
+
+# Use minimal DRC rules
+#KLAYOUT_DRC_RUNSET: pdk_dir::/libs.tech/klayout/tech/drc/sg13g2_minimal.lydrc
+
+KLAYOUT_DRC_OPTIONS:
+  densityRules: true
+
+EXTRA_GDS:
+- dir::bondpad/bondpad_70x70.gds
+
+EXTRA_LEFS:
+- dir::bondpad/bondpad_70x70.lef
+
+
+
+PAD_IO_WEST: [
+    
+    [sg13g2_IOPadIn,            "sg13g2_IOPadIn_ui\\[0\\].ui"],
+    [sg13g2_IOPadIn,            "sg13g2_IOPadIn_ui\\[1\\].ui"],
+    [sg13g2_IOPadIn,            "sg13g2_IOPadIn_ui\\[2\\].ui"],
+    [sg13g2_IOPadIn,            "sg13g2_IOPadIn_ui\\[3\\].ui"],
+    [sg13g2_IOPadIn,            "sg13g2_IOPadIn_ui\\[4\\].ui"],
+    [sg13g2_IOPadIn,            "sg13g2_IOPadIn_ui\\[5\\].ui"],
+    [sg13g2_IOPadIn,            "sg13g2_IOPadIn_ui\\[6\\].ui"],
+
+]
+
+PAD_IO_SOUTH: [
+    [sg13g2_IOPadIn,            "sg13g2_IOPadIn_ui\\[7\\].ui"],
+    [sg13g2_IOPadIn,            "sg13g2_IOPadIn_ui\\[8\\].ui"],
+    [sg13g2_IOPadIn,            "sg13g2_IOPadIn_ui\\[9\\].ui"],
+    [sg13g2_IOPadIn,            "sg13g2_IOPadIn_ui\\[10\\].ui"],
+    [sg13g2_IOPadIn,            "sg13g2_IOPadIn_ui\\[11\\].ui"],
+    
+    [sg13g2_IOPadVdd,           sg13g2_IOPadVdd_south],
+    [sg13g2_IOPadVss,           sg13g2_IOPadVss_south],
+]
+
+PAD_IO_EAST: [
+    
+    [sg13g2_IOPadOut30mA,            "sg13g2_IOPadOut30mA_uo\\[0\\].uo"],
+    [sg13g2_IOPadOut30mA,            "sg13g2_IOPadOut30mA_uo\\[1\\].uo"],
+    [sg13g2_IOPadOut30mA,            "sg13g2_IOPadOut30mA_uo\\[2\\].uo"],
+    [sg13g2_IOPadOut30mA,            "sg13g2_IOPadOut30mA_uo\\[3\\].uo"],
+    [sg13g2_IOPadOut30mA,            "sg13g2_IOPadOut30mA_uo\\[4\\].uo"],
+    [sg13g2_IOPadOut30mA,            "sg13g2_IOPadOut30mA_uo\\[5\\].uo"],
+    [sg13g2_IOPadOut30mA,            "sg13g2_IOPadOut30mA_uo\\[6\\].uo"],
+    
+    
+]
+
+PAD_IO_NORTH: [
+
+    [sg13g2_IOPadIOVdd,         sg13g2_IOPadIOVdd_north],
+    [sg13g2_IOPadIOVss,         sg13g2_IOPadIOVss_north],
+    [sg13g2_IOPadOut30mA,            "sg13g2_IOPadOut30mA_uo\\[7\\].uo"],
+    [sg13g2_IOPadOut30mA,            "sg13g2_IOPadOut30mA_uo\\[8\\].uo"],
+    [sg13g2_IOPadOut30mA,            "sg13g2_IOPadOut30mA_uo\\[9\\].uo"],
+    [sg13g2_IOPadOut30mA,            "sg13g2_IOPadOut30mA_uo\\[10\\].uo"],
+    [sg13g2_IOPadOut30mA,            "sg13g2_IOPadOut30mA_uo\\[11\\].uo"],
+
+    
+]
+
+#PNR_SDC_FILE: dir::constraint.sdc
+#SIGNOFF_SDC_FILE: dir::constraint.sdc
+#FALLBACK_SDC: dir::constraint.sdc
+
+VDD_NETS:
+- VDD
+GND_NETS:
+- VSS
+
+GRT_ALLOW_CONGESTION: true
+
+IGNORE_DISCONNECTED_MODULES:
+- sg13g2_IOPadIn
+- sg13g2_IOPadVdd
+- sg13g2_IOPadVss
+- sg13g2_IOPadIOVss
+- sg13g2_IOPadIOVdd
+- sg13g2_IOPadOut30mA
+- Drain_Line
+
+  #CLOCK_PORT: clock
+  #CLOCK_PERIOD: 100
+FP_SIZING: absolute
+DIE_AREA: [0, 0, 1200, 1200]
+CORE_AREA: [358.00, 358.00, 842, 842] 
+PL_TARGET_DENSITY_PCT: 50
+
+FP_PDN_CFG: dir::pdn.tcl
+
+# Disable, to prevent some issues
+PL_RESIZER_TIMING_OPTIMIZATIONS: false
+

@@ -1,0 +1,539 @@
+{
+  "creator": "Yosys 0.54 (git sha1 db72ec3bde296a9512b2d1e6fabf81cfb07c2c1b, clang++ 19.1.7 -fPIC -O3)",
+  "modules": {
+    "FMD_QNC_Padframe28": {
+      "attributes": {
+        "hdlname": "FMD_QNC_Padframe28",
+        "top": "00000000000000000000000000000001",
+        "src": "/home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/src/top.v:4.1-49.10"
+      },
+      "ports": {
+        "ui_PAD": {
+          "direction": "inout",
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 ]
+        },
+        "uo_PAD": {
+          "direction": "inout",
+          "bits": [ 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 ]
+        }
+      },
+      "cells": {
+        "sg13g2_IOPadIOVdd_north": {
+          "hide_name": 0,
+          "type": "sg13g2_IOPadIOVdd",
+          "parameters": {
+          },
+          "attributes": {
+            "keep": "00000000000000000000000000000001",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/src/top.v:24.23-24.49"
+          },
+          "port_directions": {
+          },
+          "connections": {
+          }
+        },
+        "sg13g2_IOPadIOVss_north": {
+          "hide_name": 0,
+          "type": "sg13g2_IOPadIOVss",
+          "parameters": {
+          },
+          "attributes": {
+            "keep": "00000000000000000000000000000001",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/src/top.v:21.23-21.49"
+          },
+          "port_directions": {
+          },
+          "connections": {
+          }
+        },
+        "sg13g2_IOPadIn_ui[0].ui": {
+          "hide_name": 0,
+          "type": "sg13g2_IOPadIn",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/src/top.v:32.24-35.10"
+          },
+          "port_directions": {
+            "p2c": "output",
+            "pad": "inout"
+          },
+          "connections": {
+            "p2c": [ 26 ],
+            "pad": [ 2 ]
+          }
+        },
+        "sg13g2_IOPadIn_ui[10].ui": {
+          "hide_name": 0,
+          "type": "sg13g2_IOPadIn",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/src/top.v:32.24-35.10"
+          },
+          "port_directions": {
+            "p2c": "output",
+            "pad": "inout"
+          },
+          "connections": {
+            "p2c": [ 27 ],
+            "pad": [ 12 ]
+          }
+        },
+        "sg13g2_IOPadIn_ui[11].ui": {
+          "hide_name": 0,
+          "type": "sg13g2_IOPadIn",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/src/top.v:32.24-35.10"
+          },
+          "port_directions": {
+            "p2c": "output",
+            "pad": "inout"
+          },
+          "connections": {
+            "p2c": [ 28 ],
+            "pad": [ 13 ]
+          }
+        },
+        "sg13g2_IOPadIn_ui[1].ui": {
+          "hide_name": 0,
+          "type": "sg13g2_IOPadIn",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/src/top.v:32.24-35.10"
+          },
+          "port_directions": {
+            "p2c": "output",
+            "pad": "inout"
+          },
+          "connections": {
+            "p2c": [ 29 ],
+            "pad": [ 3 ]
+          }
+        },
+        "sg13g2_IOPadIn_ui[2].ui": {
+          "hide_name": 0,
+          "type": "sg13g2_IOPadIn",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/src/top.v:32.24-35.10"
+          },
+          "port_directions": {
+            "p2c": "output",
+            "pad": "inout"
+          },
+          "connections": {
+            "p2c": [ 30 ],
+            "pad": [ 4 ]
+          }
+        },
+        "sg13g2_IOPadIn_ui[3].ui": {
+          "hide_name": 0,
+          "type": "sg13g2_IOPadIn",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/src/top.v:32.24-35.10"
+          },
+          "port_directions": {
+            "p2c": "output",
+            "pad": "inout"
+          },
+          "connections": {
+            "p2c": [ 31 ],
+            "pad": [ 5 ]
+          }
+        },
+        "sg13g2_IOPadIn_ui[4].ui": {
+          "hide_name": 0,
+          "type": "sg13g2_IOPadIn",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/src/top.v:32.24-35.10"
+          },
+          "port_directions": {
+            "p2c": "output",
+            "pad": "inout"
+          },
+          "connections": {
+            "p2c": [ 32 ],
+            "pad": [ 6 ]
+          }
+        },
+        "sg13g2_IOPadIn_ui[5].ui": {
+          "hide_name": 0,
+          "type": "sg13g2_IOPadIn",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/src/top.v:32.24-35.10"
+          },
+          "port_directions": {
+            "p2c": "output",
+            "pad": "inout"
+          },
+          "connections": {
+            "p2c": [ 33 ],
+            "pad": [ 7 ]
+          }
+        },
+        "sg13g2_IOPadIn_ui[6].ui": {
+          "hide_name": 0,
+          "type": "sg13g2_IOPadIn",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/src/top.v:32.24-35.10"
+          },
+          "port_directions": {
+            "p2c": "output",
+            "pad": "inout"
+          },
+          "connections": {
+            "p2c": [ 34 ],
+            "pad": [ 8 ]
+          }
+        },
+        "sg13g2_IOPadIn_ui[7].ui": {
+          "hide_name": 0,
+          "type": "sg13g2_IOPadIn",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/src/top.v:32.24-35.10"
+          },
+          "port_directions": {
+            "p2c": "output",
+            "pad": "inout"
+          },
+          "connections": {
+            "p2c": [ 35 ],
+            "pad": [ 9 ]
+          }
+        },
+        "sg13g2_IOPadIn_ui[8].ui": {
+          "hide_name": 0,
+          "type": "sg13g2_IOPadIn",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/src/top.v:32.24-35.10"
+          },
+          "port_directions": {
+            "p2c": "output",
+            "pad": "inout"
+          },
+          "connections": {
+            "p2c": [ 36 ],
+            "pad": [ 10 ]
+          }
+        },
+        "sg13g2_IOPadIn_ui[9].ui": {
+          "hide_name": 0,
+          "type": "sg13g2_IOPadIn",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/src/top.v:32.24-35.10"
+          },
+          "port_directions": {
+            "p2c": "output",
+            "pad": "inout"
+          },
+          "connections": {
+            "p2c": [ 37 ],
+            "pad": [ 11 ]
+          }
+        },
+        "sg13g2_IOPadOut30mA_uo[0].uo": {
+          "hide_name": 0,
+          "type": "sg13g2_IOPadOut30mA",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/src/top.v:41.29-44.10"
+          },
+          "port_directions": {
+            "c2p": "input",
+            "pad": "inout"
+          },
+          "connections": {
+            "c2p": [ 26 ],
+            "pad": [ 14 ]
+          }
+        },
+        "sg13g2_IOPadOut30mA_uo[10].uo": {
+          "hide_name": 0,
+          "type": "sg13g2_IOPadOut30mA",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/src/top.v:41.29-44.10"
+          },
+          "port_directions": {
+            "c2p": "input",
+            "pad": "inout"
+          },
+          "connections": {
+            "c2p": [ 27 ],
+            "pad": [ 24 ]
+          }
+        },
+        "sg13g2_IOPadOut30mA_uo[11].uo": {
+          "hide_name": 0,
+          "type": "sg13g2_IOPadOut30mA",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/src/top.v:41.29-44.10"
+          },
+          "port_directions": {
+            "c2p": "input",
+            "pad": "inout"
+          },
+          "connections": {
+            "c2p": [ 28 ],
+            "pad": [ 25 ]
+          }
+        },
+        "sg13g2_IOPadOut30mA_uo[1].uo": {
+          "hide_name": 0,
+          "type": "sg13g2_IOPadOut30mA",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/src/top.v:41.29-44.10"
+          },
+          "port_directions": {
+            "c2p": "input",
+            "pad": "inout"
+          },
+          "connections": {
+            "c2p": [ 29 ],
+            "pad": [ 15 ]
+          }
+        },
+        "sg13g2_IOPadOut30mA_uo[2].uo": {
+          "hide_name": 0,
+          "type": "sg13g2_IOPadOut30mA",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/src/top.v:41.29-44.10"
+          },
+          "port_directions": {
+            "c2p": "input",
+            "pad": "inout"
+          },
+          "connections": {
+            "c2p": [ 30 ],
+            "pad": [ 16 ]
+          }
+        },
+        "sg13g2_IOPadOut30mA_uo[3].uo": {
+          "hide_name": 0,
+          "type": "sg13g2_IOPadOut30mA",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/src/top.v:41.29-44.10"
+          },
+          "port_directions": {
+            "c2p": "input",
+            "pad": "inout"
+          },
+          "connections": {
+            "c2p": [ 31 ],
+            "pad": [ 17 ]
+          }
+        },
+        "sg13g2_IOPadOut30mA_uo[4].uo": {
+          "hide_name": 0,
+          "type": "sg13g2_IOPadOut30mA",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/src/top.v:41.29-44.10"
+          },
+          "port_directions": {
+            "c2p": "input",
+            "pad": "inout"
+          },
+          "connections": {
+            "c2p": [ 32 ],
+            "pad": [ 18 ]
+          }
+        },
+        "sg13g2_IOPadOut30mA_uo[5].uo": {
+          "hide_name": 0,
+          "type": "sg13g2_IOPadOut30mA",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/src/top.v:41.29-44.10"
+          },
+          "port_directions": {
+            "c2p": "input",
+            "pad": "inout"
+          },
+          "connections": {
+            "c2p": [ 33 ],
+            "pad": [ 19 ]
+          }
+        },
+        "sg13g2_IOPadOut30mA_uo[6].uo": {
+          "hide_name": 0,
+          "type": "sg13g2_IOPadOut30mA",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/src/top.v:41.29-44.10"
+          },
+          "port_directions": {
+            "c2p": "input",
+            "pad": "inout"
+          },
+          "connections": {
+            "c2p": [ 34 ],
+            "pad": [ 20 ]
+          }
+        },
+        "sg13g2_IOPadOut30mA_uo[7].uo": {
+          "hide_name": 0,
+          "type": "sg13g2_IOPadOut30mA",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/src/top.v:41.29-44.10"
+          },
+          "port_directions": {
+            "c2p": "input",
+            "pad": "inout"
+          },
+          "connections": {
+            "c2p": [ 35 ],
+            "pad": [ 21 ]
+          }
+        },
+        "sg13g2_IOPadOut30mA_uo[8].uo": {
+          "hide_name": 0,
+          "type": "sg13g2_IOPadOut30mA",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/src/top.v:41.29-44.10"
+          },
+          "port_directions": {
+            "c2p": "input",
+            "pad": "inout"
+          },
+          "connections": {
+            "c2p": [ 36 ],
+            "pad": [ 22 ]
+          }
+        },
+        "sg13g2_IOPadOut30mA_uo[9].uo": {
+          "hide_name": 0,
+          "type": "sg13g2_IOPadOut30mA",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/src/top.v:41.29-44.10"
+          },
+          "port_directions": {
+            "c2p": "input",
+            "pad": "inout"
+          },
+          "connections": {
+            "c2p": [ 37 ],
+            "pad": [ 23 ]
+          }
+        },
+        "sg13g2_IOPadVdd_south": {
+          "hide_name": 0,
+          "type": "sg13g2_IOPadVdd",
+          "parameters": {
+          },
+          "attributes": {
+            "keep": "00000000000000000000000000000001",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/src/top.v:15.21-15.45"
+          },
+          "port_directions": {
+          },
+          "connections": {
+          }
+        },
+        "sg13g2_IOPadVss_south": {
+          "hide_name": 0,
+          "type": "sg13g2_IOPadVss",
+          "parameters": {
+          },
+          "attributes": {
+            "keep": "00000000000000000000000000000001",
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/src/top.v:18.21-18.45"
+          },
+          "port_directions": {
+          },
+          "connections": {
+          }
+        }
+      },
+      "netnames": {
+        "ui_PAD": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 ],
+          "attributes": {
+            "src": "/home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/src/top.v:5.24-5.30"
+          }
+        },
+        "ui_PAD2CORE": {
+          "hide_name": 0,
+          "bits": [ 26, 29, 30, 31, 32, 33, 34, 35, 36, 37, 27, 28 ],
+          "attributes": {
+            "src": "/home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/src/top.v:9.17-9.28"
+          }
+        },
+        "uo_PAD": {
+          "hide_name": 0,
+          "bits": [ 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25 ],
+          "attributes": {
+            "src": "/home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/src/top.v:6.24-6.30"
+          }
+        }
+      }
+    }
+  }
+}

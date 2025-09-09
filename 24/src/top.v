@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: © 2025 Leo Moser
 // SPDX-License-Identifier: Apache-2.0
 
-module top (
+module FMD_QNC_Padframe24 (
     inout  wire [9:0] ui_PAD,
     inout  wire [9:0] uo_PAD,
 );

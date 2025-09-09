@@ -37,7 +37,7 @@ meta:
 VERILOG_DEFINES:
 - FUNCTIONAL
 
-DESIGN_NAME: top
+DESIGN_NAME: FMD_QNC_Padframe24
 VERILOG_FILES:
 - dir::src/top.v
 

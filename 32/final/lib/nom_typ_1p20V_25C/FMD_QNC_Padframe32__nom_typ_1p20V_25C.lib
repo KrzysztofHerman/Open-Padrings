@@ -1,0 +1,170 @@
+library (FMD_QNC_Padframe32) {
+  comment                        : "";
+  delay_model                    : table_lookup;
+  simulation                     : false;
+  capacitive_load_unit (1,pF);
+  leakage_power_unit             : 1pW;
+  current_unit                   : "1uA";
+  pulling_resistance_unit        : "1kohm";
+  time_unit                      : "1ns";
+  voltage_unit                   : "1v";
+  library_features(report_delay_calculation);
+
+  input_threshold_pct_rise : 50;
+  input_threshold_pct_fall : 50;
+  output_threshold_pct_rise : 50;
+  output_threshold_pct_fall : 50;
+  slew_lower_threshold_pct_rise : 20;
+  slew_lower_threshold_pct_fall : 20;
+  slew_upper_threshold_pct_rise : 80;
+  slew_upper_threshold_pct_fall : 80;
+  slew_derate_from_library : 1.0;
+
+
+  nom_process                    : 1.0;
+  nom_temperature                : 25.0;
+  nom_voltage                    : 1.20;
+
+  type ("ui_PAD") {
+    base_type : array;
+    data_type : bit;
+    bit_width : 14;
+    bit_from : 13;
+    bit_to : 0;
+  }
+  type ("uo_PAD") {
+    base_type : array;
+    data_type : bit;
+    bit_width : 14;
+    bit_from : 13;
+    bit_to : 0;
+  }
+
+  cell ("FMD_QNC_Padframe32") {
+    area : 776031.750 
+    is_macro_cell : true;
+    bus("ui_PAD") {
+      bus_type : ui_PAD;
+      direction : inout;
+      capacitance : 0.0000;
+    pin("ui_PAD[13]") {
+      direction : inout;
+      capacitance : 0.2416;
+    }
+    pin("ui_PAD[12]") {
+      direction : inout;
+      capacitance : 0.2416;
+    }
+    pin("ui_PAD[11]") {
+      direction : inout;
+      capacitance : 0.2416;
+    }
+    pin("ui_PAD[10]") {
+      direction : inout;
+      capacitance : 0.2416;
+    }
+    pin("ui_PAD[9]") {
+      direction : inout;
+      capacitance : 0.2416;
+    }
+    pin("ui_PAD[8]") {
+      direction : inout;
+      capacitance : 0.2416;
+    }
+    pin("ui_PAD[7]") {
+      direction : inout;
+      capacitance : 0.2416;
+    }
+    pin("ui_PAD[6]") {
+      direction : inout;
+      capacitance : 0.2416;
+    }
+    pin("ui_PAD[5]") {
+      direction : inout;
+      capacitance : 0.2416;
+    }
+    pin("ui_PAD[4]") {
+      direction : inout;
+      capacitance : 0.2416;
+    }
+    pin("ui_PAD[3]") {
+      direction : inout;
+      capacitance : 0.2416;
+    }
+    pin("ui_PAD[2]") {
+      direction : inout;
+      capacitance : 0.2416;
+    }
+    pin("ui_PAD[1]") {
+      direction : inout;
+      capacitance : 0.2416;
+    }
+    pin("ui_PAD[0]") {
+      direction : inout;
+      capacitance : 0.2416;
+    }
+    }
+    bus("uo_PAD") {
+      bus_type : uo_PAD;
+      direction : inout;
+      capacitance : 0.0000;
+    pin("uo_PAD[13]") {
+      direction : inout;
+      capacitance : 0.0000;
+    }
+    pin("uo_PAD[12]") {
+      direction : inout;
+      capacitance : 0.0000;
+    }
+    pin("uo_PAD[11]") {
+      direction : inout;
+      capacitance : 0.0000;
+    }
+    pin("uo_PAD[10]") {
+      direction : inout;
+      capacitance : 0.0000;
+    }
+    pin("uo_PAD[9]") {
+      direction : inout;
+      capacitance : 0.0000;
+    }
+    pin("uo_PAD[8]") {
+      direction : inout;
+      capacitance : 0.0000;
+    }
+    pin("uo_PAD[7]") {
+      direction : inout;
+      capacitance : 0.0000;
+    }
+    pin("uo_PAD[6]") {
+      direction : inout;
+      capacitance : 0.0000;
+    }
+    pin("uo_PAD[5]") {
+      direction : inout;
+      capacitance : 0.0000;
+    }
+    pin("uo_PAD[4]") {
+      direction : inout;
+      capacitance : 0.0000;
+    }
+    pin("uo_PAD[3]") {
+      direction : inout;
+      capacitance : 0.0000;
+    }
+    pin("uo_PAD[2]") {
+      direction : inout;
+      capacitance : 0.0000;
+    }
+    pin("uo_PAD[1]") {
+      direction : inout;
+      capacitance : 0.0000;
+    }
+    pin("uo_PAD[0]") {
+      direction : inout;
+      capacitance : 0.0000;
+    }
+    }
+  }
+
+}

@@ -1,0 +1,78 @@
+09-Sep-2025 16:01:00 | INFO    | KLayout version detected: 0.30.3
+09-Sep-2025 16:01:00 | INFO    | Using DRC JSON file: /home/herman/github/KrzysztofHerman/IHP-Open-PDK/ihp-sg13g2/libs.tech/klayout/python/sg13g2_pycell_lib/sg13g2_tech_mod.json
+09-Sep-2025 16:01:00 | INFO    | Generating DRC rule deck using tables: ['5_14_cont.drc']
+09-Sep-2025 16:01:00 | INFO    | DRC output will be written to: /home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/final/gds/test
+09-Sep-2025 16:01:00 | INFO    | Generating DRC rule deck using tables: ['6_9_copperpillar.drc']
+09-Sep-2025 16:01:00 | INFO    | DRC output will be written to: /home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/final/gds/test
+09-Sep-2025 16:01:00 | INFO    | Generating DRC rule deck using tables: ['5_1_nwell.drc']
+09-Sep-2025 16:01:00 | INFO    | DRC output will be written to: /home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/final/gds/test
+09-Sep-2025 16:01:00 | INFO    | Generating DRC rule deck using tables: ['5_3_nbulay.drc']
+09-Sep-2025 16:01:00 | INFO    | DRC output will be written to: /home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/final/gds/test
+09-Sep-2025 16:01:00 | INFO    | Generating DRC rule deck using tables: ['5_19_via1.drc']
+09-Sep-2025 16:01:00 | INFO    | DRC output will be written to: /home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/final/gds/test
+09-Sep-2025 16:01:00 | INFO    | Generating DRC rule deck using tables: ['6_7_schottkydiode.drc']
+09-Sep-2025 16:01:00 | INFO    | DRC output will be written to: /home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/final/gds/test
+09-Sep-2025 16:01:00 | INFO    | Generating DRC rule deck using tables: ['5_25_topmetal2.drc']
+09-Sep-2025 16:01:00 | INFO    | DRC output will be written to: /home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/final/gds/test
+09-Sep-2025 16:01:00 | INFO    | Generating DRC rule deck using tables: ['5_10_psd.drc']
+09-Sep-2025 16:01:00 | INFO    | DRC output will be written to: /home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/final/gds/test
+09-Sep-2025 16:01:00 | INFO    | Generating DRC rule deck using tables: ['9_1_lbe.drc']
+09-Sep-2025 16:01:00 | INFO    | DRC output will be written to: /home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/final/gds/test
+09-Sep-2025 16:01:00 | INFO    | Generating DRC rule deck using tables: ['5_15_contbar.drc']
+09-Sep-2025 16:01:00 | INFO    | DRC output will be written to: /home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/final/gds/test
+09-Sep-2025 16:01:00 | INFO    | Generating DRC rule deck using tables: ['6_9_pad.drc']
+09-Sep-2025 16:01:00 | INFO    | DRC output will be written to: /home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/final/gds/test
+09-Sep-2025 16:01:00 | INFO    | Generating DRC rule deck using tables: ['5_17_metaln.drc']
+09-Sep-2025 16:01:00 | INFO    | DRC output will be written to: /home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/final/gds/test
+09-Sep-2025 16:01:00 | INFO    | Generating DRC rule deck using tables: ['5_5_activ.drc']
+09-Sep-2025 16:01:00 | INFO    | DRC output will be written to: /home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/final/gds/test
+09-Sep-2025 16:01:00 | INFO    | Generating DRC rule deck using tables: ['5_7_thickgateox.drc']
+09-Sep-2025 16:01:00 | INFO    | DRC output will be written to: /home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/final/gds/test
+09-Sep-2025 16:01:00 | INFO    | Generating DRC rule deck using tables: ['5_20_vian.drc']
+09-Sep-2025 16:01:00 | INFO    | DRC output will be written to: /home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/final/gds/test
+09-Sep-2025 16:01:00 | INFO    | Generating DRC rule deck using tables: ['5_26_topmetal2filler.drc']
+09-Sep-2025 16:01:00 | INFO    | DRC output will be written to: /home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/final/gds/test
+09-Sep-2025 16:01:00 | INFO    | Generating DRC rule deck using tables: ['5_23_topmetal1filler.drc']
+09-Sep-2025 16:01:00 | INFO    | DRC output will be written to: /home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/final/gds/test
+09-Sep-2025 16:01:00 | INFO    | Generating DRC rule deck using tables: ['6_10_sealring.drc']
+09-Sep-2025 16:01:00 | INFO    | DRC output will be written to: /home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/final/gds/test
+09-Sep-2025 16:01:00 | INFO    | Generating DRC rule deck using tables: ['6_11_mim.drc']
+09-Sep-2025 16:01:00 | INFO    | DRC output will be written to: /home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/final/gds/test
+09-Sep-2025 16:01:00 | INFO    | Generating DRC rule deck using tables: ['5_2_pwellblock.drc']
+09-Sep-2025 16:01:00 | INFO    | DRC output will be written to: /home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/final/gds/test
+09-Sep-2025 16:01:00 | INFO    | Generating DRC rule deck using tables: ['5_27_passiv.drc']
+09-Sep-2025 16:01:00 | INFO    | DRC output will be written to: /home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/final/gds/test
+09-Sep-2025 16:01:00 | INFO    | Generating DRC rule deck using tables: ['7_3_metalslits.drc']
+09-Sep-2025 16:01:00 | INFO    | DRC output will be written to: /home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/final/gds/test
+09-Sep-2025 16:01:00 | INFO    | Generating DRC rule deck using tables: ['3_2_forbidden.drc']
+09-Sep-2025 16:01:00 | INFO    | DRC output will be written to: /home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/final/gds/test
+09-Sep-2025 16:01:00 | INFO    | Generating DRC rule deck using tables: ['5_8_gatpoly.drc']
+09-Sep-2025 16:01:00 | INFO    | DRC output will be written to: /home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/final/gds/test
+09-Sep-2025 16:01:00 | INFO    | Generating DRC rule deck using tables: ['7_4_pin.drc']
+09-Sep-2025 16:01:00 | INFO    | DRC output will be written to: /home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/final/gds/test
+09-Sep-2025 16:01:00 | INFO    | Generating DRC rule deck using tables: ['5_6_activfiller.drc']
+09-Sep-2025 16:01:00 | INFO    | DRC output will be written to: /home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/final/gds/test
+09-Sep-2025 16:01:00 | INFO    | Generating DRC rule deck using tables: ['6_1_npnsubstratetie.drc']
+09-Sep-2025 16:01:00 | INFO    | DRC output will be written to: /home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/final/gds/test
+09-Sep-2025 16:01:00 | INFO    | Generating DRC rule deck using tables: ['5_9_gatpolyfiller.drc']
+09-Sep-2025 16:01:00 | INFO    | DRC output will be written to: /home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/final/gds/test
+09-Sep-2025 16:01:00 | INFO    | Generating DRC rule deck using tables: ['5_22_topmetal1.drc']
+09-Sep-2025 16:01:00 | INFO    | DRC output will be written to: /home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/final/gds/test
+09-Sep-2025 16:01:00 | INFO    | Generating DRC rule deck using tables: ['5_21_topvia1.drc']
+09-Sep-2025 16:01:00 | INFO    | DRC output will be written to: /home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/final/gds/test
+09-Sep-2025 16:01:00 | INFO    | Generating DRC rule deck using tables: ['5_24_topvia2.drc']
+09-Sep-2025 16:01:00 | INFO    | DRC output will be written to: /home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/final/gds/test
+09-Sep-2025 16:01:00 | INFO    | Generating DRC rule deck using tables: ['7_2_latchup.drc']
+09-Sep-2025 16:01:00 | INFO    | DRC output will be written to: /home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/final/gds/test
+09-Sep-2025 16:01:00 | INFO    | Generating DRC rule deck using tables: ['5_16_metal1.drc']
+09-Sep-2025 16:01:00 | INFO    | DRC output will be written to: /home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/final/gds/test
+09-Sep-2025 16:01:00 | INFO    | Generating DRC rule deck using tables: ['6_9_solderbump.drc']
+09-Sep-2025 16:01:00 | INFO    | DRC output will be written to: /home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/final/gds/test
+09-Sep-2025 16:01:00 | INFO    | Generating DRC rule deck using tables: ['5_18_metalnfiller.drc']
+09-Sep-2025 16:01:00 | INFO    | DRC output will be written to: /home/herman/github/KrzysztofHerman/designs/Open-Padrings/28/final/gds/test
+09-Sep-2025 16:09:38 | ERROR   | ==================================================================================
+09-Sep-2025 16:09:38 | ERROR   | ❌ --- KLayout DRC Check Failed: Violations were detected in the layout. --- ❌
+09-Sep-2025 16:09:38 | ERROR   | ==================================================================================
+09-Sep-2025 16:09:38 | ERROR   | Violated rules are : {'Pad.fR_M3', 'Pad.fR_M4', 'Cnt.b', 'Pad.fR_TM2', 'Pad.fR_M5', 'Pad.d1R', 'Pad.fR_M2', 'Pad.kR', 'Pad.fR_TM1'}
+
+09-Sep-2025 16:09:38 | INFO    | Total DRC Run time: 518.58 seconds (including execution, analysis, and reporting)
