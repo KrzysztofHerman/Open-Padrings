@@ -6,7 +6,7 @@ PDK ?= ihp-sg13g2
 RUN_TAG = $(shell ls runs/ -1 | tail -n 1)
 TOP = FMD_QNC_Padframe24
 
-top:
+FMD_QNC_Padframe24:
 	librelane --manual-pdk config.yaml 
 .PHONY: FMD_QNC_Padframe24
 

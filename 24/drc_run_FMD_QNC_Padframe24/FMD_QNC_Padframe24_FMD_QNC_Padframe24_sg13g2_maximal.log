@@ -1,0 +1,8 @@
+# Logfile created on 2025-09-09 17:36:03 +0200 by logger.rb/v1.6.0
+2025-09-09 17:36:03 +0200: Memory Usage (420288K) : Starting running IHP-SG13G2 Klayout DRC maximum runset on /home/herman/github/KrzysztofHerman/designs/Open-Padrings/24/final/gds/FMD_QNC_Padframe24.gds
+2025-09-09 17:36:03 +0200: Memory Usage (420288K) : Ruby Version for klayout: 3.3.8
+2025-09-09 17:36:03 +0200: Memory Usage (442560K) : Loading database to memory is complete.
+2025-09-09 17:36:03 +0200: Memory Usage (442560K) : IHP-SG13G2 Klayout DRC maximum runset output at: /home/herman/github/KrzysztofHerman/designs/Open-Padrings/24/drc_run_FMD_QNC_Padframe24/FMD_QNC_Padframe24_FMD_QNC_Padframe24_sg13g2_maximal.lyrdb
+2025-09-09 17:36:03 +0200: Memory Usage (442816K) : Evaluate switches.
+2025-09-09 17:36:03 +0200: Memory Usage (442816K) : Klayout will use 1 thread(s)
+2025-09-09 17:36:03 +0200: Memory Usage (442816K) : deep mode is enabled for sg13g2_maximal runset.
