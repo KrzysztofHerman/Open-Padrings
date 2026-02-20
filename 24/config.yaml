@@ -11,22 +11,22 @@ meta:
     #Checker.KLayoutDRC: null
 
     # Disable magic DRC
-    Magic.DRC: null
-    Checker.MagicDRC: null
+    #Magic.DRC: null
+    #Checker.MagicDRC: null
 
     # Disable KLayout antenna check
-    KLayout.Antenna: null
-    Checker.KLayoutAntenna: null
+    #KLayout.Antenna: null
+    #Checker.KLayoutAntenna: null
 
     # Disable KLayout density check
     #KLayout.Density: null
     #Checker.KLayoutDensity: null
     
     # Save time
-    OpenROAD.IRDropReport: null
-    KLayout.XOR: null
-    Netgen.LVS: null
-    Checker.LVS: null
+    #OpenROAD.IRDropReport: null
+    #KLayout.XOR: null
+    #Netgen.LVS: null
+    #Checker.LVS: null
 
 DESIGN_NAME: FMD_QNC_Padframe24
 VERILOG_FILES:
