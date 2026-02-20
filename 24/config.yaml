@@ -1,138 +1,147 @@
 meta:
-  version: 2
-  flow: Classic
+  version: 3
+  flow: Chip
   substituting_steps:
-    # IO pads are used instead of pins
-    OpenROAD.IOPlacement: null
-    +OpenROAD.Floorplan: OpenROAD.Padring
-    
-    Magic.WriteLEF: null # Not needed, save time
-    Odb.CheckDesignAntennaProperties: null # Requires LEF
-    
-    # Add Seal Ring
-    #+Checker.XOR: KLayout.SealRing
-    
-    # Run Filler insertion
-    #+KLayout.SealRing: KLayout.FillerGeneration
+
+    # Magic reports some overlaps which can be ignored
+    Checker.IllegalOverlap: null
+
+    # Disable KLayout DRC
+    #KLayout.DRC: null
+    #Checker.KLayoutDRC: null
+
+    # Disable magic DRC
+    Magic.DRC: null
+    Checker.MagicDRC: null
+
+    # Disable KLayout antenna check
+    KLayout.Antenna: null
+    Checker.KLayoutAntenna: null
+
+    # Disable KLayout density check
+    #KLayout.Density: null
+    #Checker.KLayoutDensity: null
     
     # Save time
-    KLayout.DRC: null
-    Magic.DRC: null
+    OpenROAD.IRDropReport: null
     KLayout.XOR: null
-
-    Odb.ReportDisconnectedPins: null # TODO IOs
-
-    # Add steps for LVS with KLayout
-    #+Checker.LVS: OpenROAD.WriteCDL
-    #+OpenROAD.WriteCDL: KLayout.LVS
-    
-    # LVS does not work yet automatically
-    Magic.SpiceExtraction: null
-    Checker.IllegalOverlap: null
     Netgen.LVS: null
-    
-    # Just ingore for now
-    Checker.SetupViolations: null
-    Checker.HoldViolations: null
-VERILOG_DEFINES:
-- FUNCTIONAL
+    Checker.LVS: null
 
 DESIGN_NAME: FMD_QNC_Padframe24
 VERILOG_FILES:
-- dir::src/top.v
+- dir::src/chip_top.sv 
+- dir::src/chip_core.sv 
 
-# TODO magic places the I/O pads at wrong positions
-#PRIMARY_GDSII_STREAMOUT_TOOL: klayout
-#MAGIC_EXT_USE_GDS: true
+VERILOG_DEFINES: [FUNCTIONAL]
 
-# Use minimal DRC rules
-#KLAYOUT_DRC_RUNSET: pdk_dir::/libs.tech/klayout/tech/drc/sg13g2_minimal.lydrc
+# Enable plugin for better SystemVerilog support
+# USE_SLANG: True
+# SLANG_ARGUMENTS: ['--keep-hierarchy']
 
-KLAYOUT_DRC_OPTIONS:
-  densityRules: true
+# Slightly smaller file sizes
+PRIMARY_GDSII_STREAMOUT_TOOL: klayout
 
-EXTRA_GDS:
-- dir::bondpad/bondpad_70x70.gds
+# Specify the pad instances for the padring
+PAD_SOUTH: [
+    clk_pad,
+    rst_n_pad,
 
-EXTRA_LEFS:
-- dir::bondpad/bondpad_70x70.lef
-
-
-
-PAD_IO_WEST: [
-    
-    [sg13g2_IOPadIn,            "sg13g2_IOPadIn_ui\\[0\\].ui"],
-    [sg13g2_IOPadIn,            "sg13g2_IOPadIn_ui\\[1\\].ui"],
-    [sg13g2_IOPadIn,            "sg13g2_IOPadIn_ui\\[2\\].ui"],
-    [sg13g2_IOPadIn,            "sg13g2_IOPadIn_ui\\[3\\].ui"],
-    [sg13g2_IOPadIn,            "sg13g2_IOPadIn_ui\\[4\\].ui"],
-    [sg13g2_IOPadIn,            "sg13g2_IOPadIn_ui\\[5\\].ui"],
-
+    "inputs\\[7\\].input_pad",
+    "inputs\\[6\\].input_pad",
+    "vdd_pads\\[0\\].vdd_pad",
+    "vss_pads\\[0\\].vss_pad"
 ]
 
-PAD_IO_SOUTH: [
-    [sg13g2_IOPadIn,            "sg13g2_IOPadIn_ui\\[6\\].ui"],
-    [sg13g2_IOPadIn,            "sg13g2_IOPadIn_ui\\[7\\].ui"],
-    [sg13g2_IOPadIn,            "sg13g2_IOPadIn_ui\\[8\\].ui"],
-    [sg13g2_IOPadIn,            "sg13g2_IOPadIn_ui\\[9\\].ui"],
+PAD_EAST: [
     
-    [sg13g2_IOPadVdd,           sg13g2_IOPadVdd_south],
-    [sg13g2_IOPadVss,           sg13g2_IOPadVss_south],
-]
-
-PAD_IO_EAST: [
-    
-    [sg13g2_IOPadOut30mA,            "sg13g2_IOPadOut30mA_uo\\[0\\].uo"],
-    [sg13g2_IOPadOut30mA,            "sg13g2_IOPadOut30mA_uo\\[1\\].uo"],
-    [sg13g2_IOPadOut30mA,            "sg13g2_IOPadOut30mA_uo\\[2\\].uo"],
-    [sg13g2_IOPadOut30mA,            "sg13g2_IOPadOut30mA_uo\\[3\\].uo"],
-    [sg13g2_IOPadOut30mA,            "sg13g2_IOPadOut30mA_uo\\[4\\].uo"],
-    [sg13g2_IOPadOut30mA,            "sg13g2_IOPadOut30mA_uo\\[5\\].uo"],
-    
+    "outputs\\[9\\].output_pad",
+    "outputs\\[8\\].output_pad",
+    "outputs\\[7\\].output_pad",
+    "outputs\\[6\\].output_pad",
+    "outputs\\[5\\].output_pad",
+    "outputs\\[4\\].output_pad"
     
 ]
 
-PAD_IO_NORTH: [
+PAD_NORTH: [
 
-    [sg13g2_IOPadIOVdd,         sg13g2_IOPadIOVdd_north],
-    [sg13g2_IOPadIOVss,         sg13g2_IOPadIOVss_north],
-    [sg13g2_IOPadOut30mA,            "sg13g2_IOPadOut30mA_uo\\[6\\].uo"],
-    [sg13g2_IOPadOut30mA,            "sg13g2_IOPadOut30mA_uo\\[7\\].uo"],
-    [sg13g2_IOPadOut30mA,            "sg13g2_IOPadOut30mA_uo\\[8\\].uo"],
-    [sg13g2_IOPadOut30mA,            "sg13g2_IOPadOut30mA_uo\\[9\\].uo"],
-
+    "iovss_pads\\[0\\].iovss_pad",
+    "iovdd_pads\\[0\\].iovdd_pad",
+    "outputs\\[3\\].output_pad",
+    "outputs\\[2\\].output_pad",
+    "outputs\\[1\\].output_pad",
+    "outputs\\[0\\].output_pad"
     
 ]
 
-#PNR_SDC_FILE: dir::constraint.sdc
-#SIGNOFF_SDC_FILE: dir::constraint.sdc
-#FALLBACK_SDC: dir::constraint.sdc
+PAD_WEST: [
+    
+    "inputs\\[5\\].input_pad",
+    "inputs\\[4\\].input_pad",
+    "inputs\\[3\\].input_pad",
+    "inputs\\[2\\].input_pad",
+    "inputs\\[1\\].input_pad",
+    "inputs\\[0\\].input_pad"
+]
 
+# SDC files
+PNR_SDC_FILE: dir::src/chip_top.sdc
+SIGNOFF_SDC_FILE: dir::src/chip_top.sdc
+FALLBACK_SDC: dir::src/chip_top.sdc
+
+# Power / ground nets
 VDD_NETS:
 - VDD
 GND_NETS:
 - VSS
 
+# Clock
+CLOCK_PORT: clk_PAD
+CLOCK_NET: clk_pad/p2c
+
+CLOCK_PERIOD: 20
+
+# Floorplanning
+FP_SIZING: absolute
+# 3880umx5070um including 26um
+# for the sealring on all sides
+DIE_AREA: [0, 0, 1120, 1120]
+CORE_AREA: [378.00, 378.00, 742, 742] 
+# Increase for more logic
+# on your die
+PL_TARGET_DENSITY_PCT: 10
 GRT_ALLOW_CONGESTION: true
 
+# PDN
+PDN_CORE_RING: True
+
+# Override bondpad name
+PAD_BONDPAD_NAME: bondpad_70x70_novias
+
+# Bondpad is not yet included in the PDK
+EXTRA_GDS:
+- dir::ip/bondpad_70x70/gds/bondpad_70x70.gds
+- dir::ip/bondpad_70x70_novias/gds/bondpad_70x70_novias.gds
+
+EXTRA_LEFS:
+- dir::ip/bondpad_70x70/lef/bondpad_70x70.lef
+- dir::ip/bondpad_70x70_novias/lef/bondpad_70x70_novias.lef
+
 IGNORE_DISCONNECTED_MODULES:
-- sg13g2_IOPadIn
-- sg13g2_IOPadVdd
-- sg13g2_IOPadVss
-- sg13g2_IOPadIOVss
-- sg13g2_IOPadIOVdd
-- sg13g2_IOPadOut30mA
-- Drain_Line
+- bondpad_70x70
+- bondpad_70x70_novias
 
-  #CLOCK_PORT: clock
-  #CLOCK_PERIOD: 100
-FP_SIZING: absolute
-DIE_AREA: [0, 0, 1120, 1120]
-CORE_AREA: [358.00, 358.00, 762, 762] 
-PL_TARGET_DENSITY_PCT: 50
+# Maximum metal width without slotting: 30um
+PDN_CORE_RING_VWIDTH: 15
+PDN_CORE_RING_HWIDTH: 15
+# Ensure minimum spacing for long metals
+PDN_CORE_RING_VSPACING: 5
+PDN_CORE_RING_HSPACING: 5
 
-FP_PDN_CFG: dir::pdn.tcl
+PDN_CORE_RING_CONNECT_TO_PADS: True
+PDN_ENABLE_PINS: False
 
-# Disable, to prevent some issues
-PL_RESIZER_TIMING_OPTIMIZATIONS: false
+# Because we have multiple power pads for one power domain
+MAGIC_EXT_UNIQUE: notopports
 

@@ -25,14 +25,14 @@ library (FMD_QNC_Padframe24) {
   nom_temperature                : 125.0;
   nom_voltage                    : 1.08;
 
-  type ("ui_PAD") {
+  type ("input_PAD") {
     base_type : array;
     data_type : bit;
-    bit_width : 10;
-    bit_from : 9;
+    bit_width : 8;
+    bit_from : 7;
     bit_to : 0;
   }
-  type ("uo_PAD") {
+  type ("output_PAD") {
     base_type : array;
     data_type : bit;
     bit_width : 10;
@@ -41,94 +41,94 @@ library (FMD_QNC_Padframe24) {
   }
 
   cell ("FMD_QNC_Padframe24") {
-    area : 507360.500 
+    area : 477464.062 
     is_macro_cell : true;
-    bus("ui_PAD") {
-      bus_type : ui_PAD;
-      direction : inout;
-      capacitance : 0.0000;
-    pin("ui_PAD[9]") {
+    pin("clk_PAD") {
       direction : inout;
       capacitance : 0.2440;
     }
-    pin("ui_PAD[8]") {
+    pin("rst_n_PAD") {
       direction : inout;
       capacitance : 0.2440;
     }
-    pin("ui_PAD[7]") {
+    bus("input_PAD") {
+      bus_type : input_PAD;
+      direction : inout;
+      capacitance : 0.0000;
+    pin("input_PAD[7]") {
       direction : inout;
       capacitance : 0.2440;
     }
-    pin("ui_PAD[6]") {
+    pin("input_PAD[6]") {
       direction : inout;
       capacitance : 0.2440;
     }
-    pin("ui_PAD[5]") {
+    pin("input_PAD[5]") {
       direction : inout;
       capacitance : 0.2440;
     }
-    pin("ui_PAD[4]") {
+    pin("input_PAD[4]") {
       direction : inout;
       capacitance : 0.2440;
     }
-    pin("ui_PAD[3]") {
+    pin("input_PAD[3]") {
       direction : inout;
       capacitance : 0.2440;
     }
-    pin("ui_PAD[2]") {
+    pin("input_PAD[2]") {
       direction : inout;
       capacitance : 0.2440;
     }
-    pin("ui_PAD[1]") {
+    pin("input_PAD[1]") {
       direction : inout;
       capacitance : 0.2440;
     }
-    pin("ui_PAD[0]") {
+    pin("input_PAD[0]") {
       direction : inout;
       capacitance : 0.2440;
     }
     }
-    bus("uo_PAD") {
-      bus_type : uo_PAD;
+    bus("output_PAD") {
+      bus_type : output_PAD;
       direction : inout;
       capacitance : 0.0000;
-    pin("uo_PAD[9]") {
-      direction : inout;
-      capacitance : 0.0000;
-    }
-    pin("uo_PAD[8]") {
+    pin("output_PAD[9]") {
       direction : inout;
       capacitance : 0.0000;
     }
-    pin("uo_PAD[7]") {
+    pin("output_PAD[8]") {
       direction : inout;
       capacitance : 0.0000;
     }
-    pin("uo_PAD[6]") {
+    pin("output_PAD[7]") {
       direction : inout;
       capacitance : 0.0000;
     }
-    pin("uo_PAD[5]") {
+    pin("output_PAD[6]") {
       direction : inout;
       capacitance : 0.0000;
     }
-    pin("uo_PAD[4]") {
+    pin("output_PAD[5]") {
       direction : inout;
       capacitance : 0.0000;
     }
-    pin("uo_PAD[3]") {
+    pin("output_PAD[4]") {
       direction : inout;
       capacitance : 0.0000;
     }
-    pin("uo_PAD[2]") {
+    pin("output_PAD[3]") {
       direction : inout;
       capacitance : 0.0000;
     }
-    pin("uo_PAD[1]") {
+    pin("output_PAD[2]") {
       direction : inout;
       capacitance : 0.0000;
     }
-    pin("uo_PAD[0]") {
+    pin("output_PAD[1]") {
+      direction : inout;
+      capacitance : 0.0000;
+    }
+    pin("output_PAD[0]") {
       direction : inout;
       capacitance : 0.0000;
     }
